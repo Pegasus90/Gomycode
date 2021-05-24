@@ -1,0 +1,33 @@
+ALGORITHM checkpoint
+VAR
+    sentence : STRING;
+    i,words, vowels, len: INTEGER:=0;
+BEGIN
+    REPEAT
+        write('Input a sentence:')
+        Read(sentence);
+        len := sentence.length
+    UNTIL (len=='.')
+    FOR I FROM 1 to len DO
+        IF(sentence[i]==' ') THEN words := words + 1;
+        END_IF
+        SWITCH(sentence[i].toLowerCase())
+            CASE 'a': vowels := vowels +1;
+            break;
+            CASE 'e': vowels := vowels +1;
+            break;
+            CASE 'i': vowels := vowels +1;
+            break;
+            CASE 'u': vowels := vowels +1;
+            break;
+            CASE 'y': vowels := vowels +1;
+            break;
+            CASE 'o': vowels := vowels +1;
+            break;
+            default:
+        END_SWITCH
+    END_FOR
+    write('Length of the sentence: ',len)
+    write('Number of words: ',words)
+    write('Number of vowels: ',vowels)
+END
