@@ -6,7 +6,7 @@ BEGIN
     REPEAT
         write('Input a sentence:')
         Read(sentence);
-        len := sentence.length
+        len := sentence.length -1
     UNTIL (len=='.')
     FOR I FROM 1 to len DO
         IF(sentence[i]==' ') THEN words := words + 1;
