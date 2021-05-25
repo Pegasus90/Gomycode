@@ -1,0 +1,27 @@
+ALGORITHM checkpoint
+VAR
+   set1,set2 : ARRAY_OF INTEGER[10]; 
+   i,j : INTEGER;
+   sum : INTEGER = 0;
+BEGIN
+    //Inserting Elements
+    FOR I FROM 0 to set1.length-1 DO
+        write('Enter set1 element : ',i);
+        read(set1[i]);
+    END_FOR
+    FOR I FROM 0 to set1.length-1 DO
+        write('Enter set2 element : ',i);
+        read(set2[i]);
+    END_FOR
+    //Search for elements is present and add it to the sum
+    FOR I FROM 0 to set1.length-1 DO
+        WHILE (j < set2.length || set1[i] = set2[j]) DO
+            j:=j+1; 
+        END_WHILE
+        IF(j = set2.length) THEN 
+            sum := sum + set1[j];
+        END_IF
+    END_FOR
+    //Display the sum
+    write('Sum = ',sum);
+END

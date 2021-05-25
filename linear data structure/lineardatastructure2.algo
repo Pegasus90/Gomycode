@@ -1,0 +1,17 @@
+ALGORITHM checkpoint
+VAR
+   set1 : HASH_TABLE<INTEGER,INTEGER>;
+   set2 : HASH_TABLE<INTEGER,STRING>;
+   i,j : INTEGER;
+   sum : INTEGER = 0;
+BEGIN
+    FOR I FROM 1 to set1.length-1 DO
+        WHILE (j < set2.length || set1[i] = set2[j]) DO
+            j:=j+1; 
+        END_WHILE
+        IF(j = set2.length) THEN 
+            sum := sum + set1[j];
+        END_IF
+    END_FOR
+    write('Sum = ',sum);
+END
