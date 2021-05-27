@@ -1,17 +1,40 @@
 ALGORITHM checkpoint
 VAR
-   set1 : HASH_TABLE<INTEGER,INTEGER>;
-   set2 : HASH_TABLE<INTEGER,STRING>;
+   set1,set2,set3 : ARRAY_OF INTEGER[10];
    i,j : INTEGER;
    sum : INTEGER = 0;
+   htab : HASH_TABLE<INTEGER,INTEGER>
 BEGIN
-    FOR I FROM 1 to set1.length-1 DO
-        WHILE (j < set2.length || set1[i] = set2[j]) DO
-            j:=j+1; 
-        END_WHILE
-        IF(j = set2.length) THEN 
-            sum := sum + set1[j];
+    //Inserting Elements
+    FOR I FROM 0 to set1.length-1 DO
+        write('Enter set1 element : ',i);
+        read(set1[i]);
+    END_FOR
+    FOR I FROM 0 to set1.length-1 DO
+        write('Enter set2 element : ',i);
+        read(set2[i]);
+    END_FOR
+    //Fusing the two sets into one set3
+    FOR I FROM 0 to set1.length+set2.length-1 DO
+        IF(I>set1.length-1) THEN
+            set3[i] := set1[i];
+        ELSE
+            set3[i] := set2[i-set1.length-1];
         END_IF
     END_FOR
+    FOR I FROM 0 to set3.length-1 DO
+        IF(htab.lookup(set3[i])) THEN
+            htab.insert(set3[i],1)
+        ELSE htab.insert(set3[i],0)
+        END_IF
+    END_FOR
+    //Adding the elements to the sum
+    FOR I FROM 0 to set3.length-1 DO
+        IF(htab.get(set3[i]) = 1) THEN
+            sum := sum + set3[i];
+        END_IF
+    END_FOR
+    write('Sum = ',sum);
+    //Display the sum
     write('Sum = ',sum);
 END
