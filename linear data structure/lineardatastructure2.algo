@@ -34,7 +34,6 @@ BEGIN
             sum := sum + set3[i];
         END_IF
     END_FOR
-    write('Sum = ',sum);
     //Display the sum
     write('Sum = ',sum);
 END
