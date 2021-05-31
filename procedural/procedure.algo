@@ -1,0 +1,46 @@
+PROCEDURE dot_product(t1,t2 : ARRAY_OF INTEGER, ps: INTEGER)
+
+BEGIN
+    ps:=t1[0]*t2[0]+t1[1]*t2[1];
+END
+
+FUNCTION num_vector_pairs() : INTEGER
+VAR
+    n: INTEGER;
+BEGIN
+    REPEAT
+        Write("Enter the number of vectors");
+        Read(n);
+    UNTIL (n%2=0 and n>2)
+    RETURN n ;
+END
+
+PROCEDURE read_Vect(VAR : T : ARRAY_OF INTEGER)
+BEGIN
+    Write("Enter X cord of the vector.")
+    Read(T[0]);
+    Write("Enter Y cord of the vector.")
+    Read(T[1]);
+END
+
+ALGORITHM dotprod
+VAR
+    htab: HASH_TABLE<INTEGER,ARRAY_OF INTEGER[2]>
+    i,j,n,ps : INTEGER;
+
+BEGIN
+
+n:=num_vector_pairs();
+
+FOR i FROM 0 TO n-1 DO
+    read_Vect(htab.insert(i));
+END_FOR
+
+FOR i FROM 0 TO n-2 DO
+    ps := dot_product(htab.get(i),htab.get(i+1),ps);
+        IF (ps=0) THEN
+            Write(htab1.get(i)," and " htab1.get(i+1), " are orthogonals.");
+        END_IF
+END_FOR
+
+END
