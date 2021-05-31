@@ -1,6 +1,5 @@
 FUNCTION dot_product(t1,t2 : ARRAY_OF INTEGER) : INTEGER
-VAR
-    i,ps : INTEGER.
+
 BEGIN
     ps:=t1[0]*t2[0]+t1[1]*t2[1];
     RETURN (ps);
