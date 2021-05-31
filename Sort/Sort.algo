@@ -1,0 +1,43 @@
+
+PROCEDURE table_read(var t: ARRAY_OF INTEGER)
+VAR
+    i : INTEGER;
+BEGIN
+    FOR i FROM 0 TO 9 DO
+        WRITE("ENTER T[",i,"].");
+        READ(t[i]);
+    END_FOR
+END
+
+PROCEDURE Insertionsort(VAR t : ARRAY_OF INTEGER)
+VAR
+    i,j,card : INTEGER;
+BEGIN
+    FOR i FROM 1 TO t.length-1 DO
+        card := t[i];
+        j := i-1;
+        REPEAT
+            t[j+1] := t[j];
+            j := j-1;
+        UNTIL(j < 0 OR t[j] > card)
+        t[j+1] := card;
+    END_FOR
+END
+
+PROCEDURE table_show(VAR t: ARRAY_OF INTEGER)
+VAR
+    i : INTEGER
+BEGIN
+    FOR i FROM 0 TO 9 DO
+        WRITE(t[i]);
+    END_FOR
+END
+
+ALGORITHM Insertsortcards
+    VAR t: ARRAY_OF INTEGER;
+    
+BEGIN
+    table_read(t);
+    Insertionsort(t);
+    table_show(t);
+END
