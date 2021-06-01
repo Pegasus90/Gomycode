@@ -1,14 +1,16 @@
 ALGORITHM checkpoint
 VAR
-    sentence : STRING;
+    sentence : STRING:='';
+    c : CHAR;
     i,words, vowels, len: INTEGER:=0;
 BEGIN
     REPEAT
-        write('Input a sentence:')
-        Read(sentence);
-        len := sentence.length -1
-    UNTIL (len=='.')
-    FOR I FROM 1 to len DO
+        write('Input a character:')
+        Read(c);
+        sentence := sentence + c;
+    UNTIL (c == '.')
+    len := sentence.length -1
+    FOR I FROM 0 to len DO
         IF(sentence[i]==' ') THEN words := words + 1;
         END_IF
         SWITCH(sentence[i].toLowerCase())
