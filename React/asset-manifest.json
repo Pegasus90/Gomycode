@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Pegasus90/Gomycode.git/static/css/main.db3c80ff.chunk.css",
+    "main.js": "/Pegasus90/Gomycode.git/static/js/main.6b86faf1.chunk.js",
+    "main.js.map": "/Pegasus90/Gomycode.git/static/js/main.6b86faf1.chunk.js.map",
+    "runtime-main.js": "/Pegasus90/Gomycode.git/static/js/runtime-main.8981cb72.js",
+    "runtime-main.js.map": "/Pegasus90/Gomycode.git/static/js/runtime-main.8981cb72.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/Pegasus90/Gomycode.git/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.8b7e8da9.chunk.js": "/Pegasus90/Gomycode.git/static/js/2.8b7e8da9.chunk.js",
+    "static/js/2.8b7e8da9.chunk.js.map": "/Pegasus90/Gomycode.git/static/js/2.8b7e8da9.chunk.js.map",
+    "static/js/3.689ba875.chunk.js": "/Pegasus90/Gomycode.git/static/js/3.689ba875.chunk.js",
+    "static/js/3.689ba875.chunk.js.map": "/Pegasus90/Gomycode.git/static/js/3.689ba875.chunk.js.map",
+    "index.html": "/Pegasus90/Gomycode.git/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/Pegasus90/Gomycode.git/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.db3c80ff.chunk.css.map": "/Pegasus90/Gomycode.git/static/css/main.db3c80ff.chunk.css.map",
+    "static/js/2.8b7e8da9.chunk.js.LICENSE.txt": "/Pegasus90/Gomycode.git/static/js/2.8b7e8da9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8981cb72.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.8b7e8da9.chunk.js",
+    "static/css/main.db3c80ff.chunk.css",
+    "static/js/main.6b86faf1.chunk.js"
+  ]
+}
